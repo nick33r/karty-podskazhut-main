@@ -1,3 +1,11 @@
+:root {
+  --main-font: raleway;
+  --accent-font: "STIX Two Text";
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +15,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  color: var(--text-color, #312a4e);
+  font-family: var(--main-font, sans-serif);
+  background-color: var(--bg-color, #f3efec);
 }
 
 p,
@@ -19,4 +30,16 @@ ol,
 li,
 figure {
   margin: 0;
+}
+
+
+.heading {
+  font-family: var(--accent-font, serif);
+  font-weight: 600;
+  line-height: 0.9em;
+  text-align: center;
+}
+
+.content-section {
+  padding: 0 5vi;
 }
