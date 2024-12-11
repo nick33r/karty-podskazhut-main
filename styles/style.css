@@ -13,11 +13,11 @@
 }
 
 .page {
-  min-inline-size: 360px;
   margin: 0;
   color: var(--text-color, #312a4e);
   font-family: var(--main-font, sans-serif);
   background-color: var(--bg-color, #f3efec);
+  min-inline-size: 360px;
 }
 
 p,
@@ -42,4 +42,64 @@ figure {
 
 .content-section {
   padding: 0 5vi;
+}
+
+.header {
+  padding-block-start: 10%;
+}
+
+.header__title {
+  margin-block-end: 40px;
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
+.content-title {
+  margin: 7% 0 2.5%;
+  font-size: 30px;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  margin-block-end: 1.5em;
+}
+
+.content__text-block .content-link {
+  color: inherit;
+}
+
+.content__blockquote {
+  font-style: italic;
+  line-height: 2;
+  inline-size: 75%;
+  margin: 0 auto 1.5em;
+}
+
+.content-list {
+  padding: 0 0 0 40px;
+  list-style: none;
+}
+
+.content-list__item {
+  position: relative;
+}
+
+.content-list__item::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-block-start: -7.5px;
+  background-image: url(../images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  inset-block-start: 50%;
+  inset-inline-start: -25px;
+}
+
+.content-list__item:not(:last-of-type) {
+  margin-bottom: 10px;
 }
