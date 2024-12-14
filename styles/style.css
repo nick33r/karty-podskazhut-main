@@ -6,11 +6,19 @@
   --accent-color: #ffab6b;
 }
 
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #b3b3b3;
+  --accent-color: transparent;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* General styles */
 
 .page {
   margin: 0;
@@ -55,6 +63,8 @@ button:disabled {
 .content-section {
   padding: 0 5vi;
 }
+
+/* Header */
 
 .header {
   padding-block-start: 10%;
@@ -111,6 +121,8 @@ button:disabled {
   inset-block-end: 0.2ch;
   inset-inline-start: -4px;
 }
+
+/* Content */
 
 .content-title {
   margin: 7% 0 2.5%;
@@ -222,4 +234,35 @@ button:disabled {
   block-size: 0.5ch;
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
-} 
+}
+
+/* Footer */
+
+.footer {
+  margin-block-start: 10%;
+  border-block-start: 1px solid currentColor;
+  padding: 2.5%;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 18px;
+}
+
+/* Dark theme */
+
+.theme_dark .colored-text::after {
+  background-image: url(../images/pattern.svg);
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url(../images/pattern.svg);
+}
+
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  border: 1px solid currentColor;
+}
+
+.theme_dark .content-list li::before {
+  background-image: url(../images/marker-dark.svg);
+}
