@@ -32,6 +32,18 @@ figure {
   margin: 0;
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+button:disabled {
+  pointer-events: none;
+}
 
 .heading {
   font-family: var(--accent-font, serif);
@@ -51,6 +63,53 @@ figure {
 .header__title {
   margin-block-end: 40px;
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  padding-block: 20px;
+}
+
+.header__theme-toggler {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-button {
+  position: relative;
+  border: none;
+  padding: 0;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-button:not([disabled]):hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: var(--accent-color);
+  inline-size: calc(100% + 8px);
+  block-size: 0.6ch;
+  inset-block-end: 0.2ch;
+  inset-inline-start: -4px;
 }
 
 .content-title {
