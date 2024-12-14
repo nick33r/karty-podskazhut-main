@@ -71,10 +71,10 @@ figure {
 }
 
 .content__blockquote {
+  margin: 0 auto 1.5em;
   font-style: italic;
   line-height: 2;
   inline-size: 75%;
-  margin: 0 auto 1.5em;
 }
 
 .content-list {
@@ -102,4 +102,31 @@ figure {
 
 .content-list__item:not(:last-of-type) {
   margin-bottom: 10px;
+}
+
+.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  display: inline-block;
+  margin-inline-end: 1px;
+  padding: 0 4px;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: var(--accent-color, #ffab6b);
+}
+
+.content__figure {
+  position: relative;
+  margin: 7% auto;
+  inline-size: calc(100% + 10vi);
+  inset-inline-end: 5vi;
+}
+
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__picture-caption {
+  border-block-end: 1px solid currentColor;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
 }
